@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const connection = require('./database/database');
 
 
-const Games = require('./controller/Games')
+const Games = require('./model/Games')
 
 
 
