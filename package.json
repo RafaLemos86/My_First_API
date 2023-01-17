@@ -1,0 +1,25 @@
+{
+  "name": "api_games_bd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaLemos86/API_Games_BD.git"
+  },
+  "author": "Rafael Lemos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaLemos86/API_Games_BD/issues"
+  },
+  "homepage": "https://github.com/RafaLemos86/API_Games_BD#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.0.1",
+    "sequelize": "^6.28.0"
+  }
+}
