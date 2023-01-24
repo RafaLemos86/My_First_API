@@ -14,6 +14,9 @@ const User = require('./model/User');
 // configurando jwt
 const JWTSecret = 'l(ID=Nqltf9yuSq0MMkjoy$szxdJc7bLiSKxFXldIfXT/4vKs·';
 
+// middlewer
+const auth = require('./middlewer/auth')
+
 
 // configurando body-parser
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,11 +25,11 @@ app.use(bodyParser.json());
 
 
 // retornando a lista de games 
-app.get('/games', (req, res) => {
+app.get('/games', auth, (req, res) => {
     Games.findAll()
         .then((games) => {
-            res.json(games)
-
+            res.json({ user: req.loggedUser, games })
+            res.status(200)
         })
         .catch(() => {
             res.status(400)
@@ -55,7 +58,7 @@ app.post('/auth', (req, res) => {
                         res.status(200);
                         res.json({ token });
                     }
-                })
+                });
 
 
             } else {
