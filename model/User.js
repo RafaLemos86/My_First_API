@@ -1,24 +1,24 @@
 const Sequelize = require('sequelize');
 const connection = require('../database/database');
 
-
-const Games = connection.define('game', {
-    title: {
+const User = connection.define('user', {
+    name: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    year: {
-        type: Sequelize.INTEGER,
+    email: {
+        type: Sequelize.STRING,
+        unique: true,
         allowNull: false
     },
-    price: {
-        type: Sequelize.INTEGER,
+    password: {
+        type: Sequelize.STRING,
         allowNull: false
     }
 });
 
-// Games.sync({
+// User.sync({
 //     force: true
 // });
 
-module.exports = Games
+module.exports = User;
