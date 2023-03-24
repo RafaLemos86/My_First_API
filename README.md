@@ -34,13 +34,13 @@ extra de segurança através do uso de autenticação JWT
 ```
 /game
 ```
-6. Criando um Novo Usuário
+6. Criando um Novo Usuário - *Post*
 ```
-/user - *Post*
+/user
 ```
-7. Deletando um Game
+7. Deletando um Game - *Delete*
 ```
-/game/:id - *Delete*
+/game/:id 
 ```
 8. Editando um Game - *Put*
 ```
